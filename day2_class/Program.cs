@@ -31,9 +31,9 @@ shape.GetFullInfo();
 System.Console.WriteLine();
 
 User user=new User();
-user.Firstname="Abdughaffor";
-user.Lastname="Rahimov";
-user.Username="Kiler";
+user.FirstName="Abdughaffor";
+user.LastName="Rahimov";
+user.UserName="Kiler";
 user.Password="GHaffor01";
 user.Login("Kiler","GHaffor01");
 System.Console.WriteLine(user.GetFullInfo());

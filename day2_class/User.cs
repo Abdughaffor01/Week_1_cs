@@ -1,14 +1,14 @@
 public class User
 {
 
-   public string Firstname;
-   public string Lastname;
-   public string Username;
+   public string FirstName;
+   public string LastName;
+   public string UserName;
    public string Password;
    public bool IsLoggedOn;
    public void Login(string username, string password)
    {
-      if (Username == username && Password == password)
+      if (UserName == username && Password == password)
       {
          System.Console.WriteLine("Пользователь успешно зарегистрирован");
          IsLoggedOn = true;
@@ -23,7 +23,7 @@ public class User
       IsLoggedOn = false;
    }
    public string GetFullInfo(){
-       return ($"{Firstname} {Lastname} - {IsLoggedOn}");
+       return ($"{FirstName} {LastName} - {IsLoggedOn}");
    }
 
 }
