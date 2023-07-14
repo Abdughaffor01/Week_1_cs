@@ -23,32 +23,56 @@ rec.GetArea();
 rec.GetPerimeter();
 System.Console.WriteLine();
 
-Student s1 = new Student();
-s1.Name = "Ali";
-s1.Gradle = 3;
-s1.Everage = new int[4] { 20, 40, 90, 40 };
-System.Console.WriteLine();
+var list = new List<Student>();
 
-Student s2 = new Student();
-s2.Name = "Ghaffor";
-s2.Gradle = 6;
-s2.Everage = new int[4] { 70, 80, 90, 80 };
-System.Console.WriteLine();
-
-Student s3 = new Student();
-s3.Name = "Idibek";
-s3.Gradle = 10;
-s3.Everage = new int[4] { 90, 90, 90, 90 };
-System.Console.WriteLine();
-
-
-string[,] students ={
-{s1.Name,Convert.ToString(s1.Gradle),Convert.ToString(s1.Sredbal()),s1.Gzarish()},
-{s2.Name,Convert.ToString(s2.Gradle),Convert.ToString(s2.Sredbal()),s2.Gzarish()},
-{s3.Name,Convert.ToString(s3.Gradle),Convert.ToString(s3.Sredbal()),s3.Gzarish()}
+Student s1 = new Student()
+{
+   Name = "Ali",
+   Gradle = 3,
+   Everage = new int[4] { 20, 40, 90, 40 }
 };
 
-foreach (var item in students)
+Student s2 = new Student()
 {
-   System.Console.WriteLine(item);
+   Name = "Ghaffor",
+   Gradle = 6,
+   Everage = new int[4] { 70, 80, 90, 80 },
+};
+
+Student s3 = new Student()
+{
+   Name = "Idibek",
+   Gradle = 10,
+   Everage = new int[4] { 90, 90, 90, 90 }
+};
+
+Student s4 = new Student()
+{
+   Name = "Khuram",
+   Gradle = 10,
+   Everage = new int[4] { 90, 10, 80, 90 }
+};
+
+Student s5 = new Student()
+{
+   Name = "Umar",
+   Gradle = 2,
+   Everage = new int[4] { 20, 60, 90, 90 }
+};
+
+list.Add(s1);
+list.Add(s2);
+list.Add(s3);
+list.Add(s4);
+list.Add(s5);
+
+foreach (var e in list)
+{
+   System.Console.WriteLine(e.Name);
+   System.Console.WriteLine(e.Gradle);
+   System.Console.WriteLine(e.Sredbal());
+   if (e.Sredbal() > 85) Console.WriteLine($"{e.Name} брашка табрик гзашти");
+   else if (e.Sredbal() > 70) Console.WriteLine($"{e.Name} брашка хондан даркор");
+   else Console.WriteLine($"{e.Name} Карочи ай т програмист нмероя ");
+   System.Console.WriteLine();
 }
