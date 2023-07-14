@@ -2,7 +2,7 @@ public class Rectange
 {
     public int Width;
     public int Height;
-    public string Color;
+    public string? Color;
     public void GetArea()
     {
         System.Console.WriteLine($"GetArea Rectange : {Width*Height}");

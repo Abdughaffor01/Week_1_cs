@@ -21,6 +21,7 @@ public class Student
       {
          return "Молодец гапт надорм гзащти"; 
       }
+      else if(sum / Everage.Length>70) return "Хай ак и мох мебахшемт сахт хон";
       else return "Балт камай брашка ай сар хон";
    }
 }
